@@ -1,5 +1,5 @@
 Student Grade Metrics
-I.  Assigned Task
+
 The primary objective of this project, Student Grade Metrics, is to design and implement a C++ application that allows users to manage student records and compute specific grade metrics using dynamic memory and object-oriented programming principles.
 This project aims to:
  Represent student data using structures, including dynamically allocated arrays for grades.
@@ -7,6 +7,15 @@ Demonstrate polymorphism by designing a metric system where different grading me
  Utilize pointer arithmetic to operate on dynamically allocated grade arrays.
  Provide interactive functionality to add or remove grades, view metrics, and manage multiple students through a console menu.
 Apply proper memory management by ensuring that all dynamically allocated memory is correctly cleaned up to prevent memory leaks
+I.  Assigned Task
+The assigned task, as described in the "Student Grade Metrics: Explanation" document, involved creating a C++ program with the following key objectives:
+
+1.Define a `Student` struct:This struct needed to manage student names and dynamically allocated arrays of their grades. This included implementing a constructor for proper initialization and a destructor for memory cleanup.
+2.  Implement an abstract `Metric` base class:This class was designed to serve as an interface for different grade calculation methods. Derived classes, `MeanMetric` and `MinMetric`, were then created to compute the average and minimum grades, respectively, demonstrating inheritance and polymorphism.
+3.  Utilize polymorphic storage for metrics: The program was required to store `Metric` pointers in a `Metric**` array, showcasing how polymorphism allows calling the correct `compute` method at runtime.
+4.  Employ pointer arithmetic: All operations involving the `grades` array (calculating metrics, adding, and removing grades) needed to explicitly use pointer arithmetic instead of array indexing.
+5.  Implement grade management functions: Functions for adding (`addGrade`) and removing (`removeGrade`) grades dynamically by resizing the grade array were required.
+6.  Ensure robust memory management: Proper allocation and deallocation of all dynamic memory (for `Student` objects, grade arrays, `Metric` objects, and the `metrics` array) was crucial to prevent memory leaks.
 
 II. How the Task Was Completed
 This project was developed using C++ and follows object-oriented programming principles, dynamic memory management, and user interaction through a console-based menu. Here's a breakdown of how each task from the assignment was completed:
