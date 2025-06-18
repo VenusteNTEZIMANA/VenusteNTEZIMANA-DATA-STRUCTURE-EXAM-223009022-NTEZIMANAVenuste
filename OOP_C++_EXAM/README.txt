@@ -1,3 +1,4 @@
+Student Grade Metrics
 I.  Assigned Task
 The primary objective of this project, Student Grade Metrics, is to design and implement a C++ application that allows users to manage student records and compute specific grade metrics using dynamic memory and object-oriented programming principles.
 This project aims to:
