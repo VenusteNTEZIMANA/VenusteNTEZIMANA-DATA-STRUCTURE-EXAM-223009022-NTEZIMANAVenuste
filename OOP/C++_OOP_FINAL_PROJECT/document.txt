@@ -10,7 +10,7 @@ Apply proper memory management by ensuring that all dynamically allocated memory
 I.  Assigned Task
 The assigned task, as described in the "Student Grade Metrics: Explanation" document, involved creating a C++ program with the following key objectives:
 
-1.Define a `Student` struct:This struct needed to manage student names and dynamically allocated arrays of their grades. This included implementing a constructor for proper initialization and a destructor for memory cleanup.
+1.Define a Student struct:This struct needed to manage student names and dynamically allocated arrays of their grades. This included implementing a constructor for proper initialization and a destructor for memory cleanup.
 2.  Implement an abstract `Metric` base class:This class was designed to serve as an interface for different grade calculation methods. Derived classes, `MeanMetric` and `MinMetric`, were then created to compute the average and minimum grades, respectively, demonstrating inheritance and polymorphism.
 3.  Utilize polymorphic storage for metrics: The program was required to store `Metric` pointers in a `Metric**` array, showcasing how polymorphism allows calling the correct `compute` method at runtime.
 4.  Employ pointer arithmetic: All operations involving the `grades` array (calculating metrics, adding, and removing grades) needed to explicitly use pointer arithmetic instead of array indexing.
@@ -23,7 +23,7 @@ This project was developed using C++ and follows object-oriented programming pri
 A Student structure was created to store each student's name, their list of grades, and the number of grades they have. Instead of using fixed-size arrays for grades, dynamic memory allocation was used. This means that when a student is created, the memory for their grades is allocated at runtime based on how many grades the user wants to enter.
 2. Abstract Metric Class and Inheritance
 An abstract base class named Metric was defined. This class includes a pure virtual function, meaning that any class derived from it must implement this function. Two metric types were created:
-MeanMetric: Calculates the average of a student’s grades.
+MeanMetric: Calculates the average of a studentâ€™s grades.
 MinMetric: Determines the minimum grade from the list.
 Both classes inherit from Metric, demonstrating the use of inheritance and polymorphism.
 3. Polymorphism and Metric Array
@@ -32,8 +32,8 @@ To demonstrate polymorphism, an array of pointers to the Metric base class was u
 Instead of using traditional array indexing, all metric calculations and grade manipulations are done using pointer arithmetic. This involves navigating through the grade array using memory address manipulation, which reinforces understanding of low-level operations in C++.
 5. Grade Addition and Removal Functions
 Two functions were implemented to manage grades:
-Add Grade: This creates a new dynamic array one element larger than the current one, copies the existing grades, adds the new grade at the end, deletes the old array, and updates the student’s grade pointer.
-Remove Grade: This does the reverse—creates a new array one element smaller, skips the grade to be removed while copying, deletes the old array, and updates the student's grade pointer.
+Add Grade: This creates a new dynamic array one element larger than the current one, copies the existing grades, adds the new grade at the end, deletes the old array, and updates the studentâ€™s grade pointer.
+Remove Grade: This does the reverseâ€”creates a new array one element smaller, skips the grade to be removed while copying, deletes the old array, and updates the student's grade pointer.
 These functions ensure that memory is properly managed each time grades are added or removed.
 6. Menu-Based User Interface
 The program features a loop-driven text menu that allows users to interact with the system. Options include:
