@@ -13,7 +13,7 @@ This project was developed using C++ and follows object-oriented programming pri
 A Student structure was created to store each student's name, their list of grades, and the number of grades they have. Instead of using fixed-size arrays for grades, dynamic memory allocation was used. This means that when a student is created, the memory for their grades is allocated at runtime based on how many grades the user wants to enter.
 2. Abstract Metric Class and Inheritance
 An abstract base class named Metric was defined. This class includes a pure virtual function, meaning that any class derived from it must implement this function. Two metric types were created:
-MeanMetric: Calculates the average of a student’s grades.
+MeanMetric: Calculates the average of a studentâ€™s grades.
 MinMetric: Determines the minimum grade from the list.
 Both classes inherit from Metric, demonstrating the use of inheritance and polymorphism.
 3. Polymorphism and Metric Array
@@ -22,8 +22,8 @@ To demonstrate polymorphism, an array of pointers to the Metric base class was u
 Instead of using traditional array indexing, all metric calculations and grade manipulations are done using pointer arithmetic. This involves navigating through the grade array using memory address manipulation, which reinforces understanding of low-level operations in C++.
 5. Grade Addition and Removal Functions
 Two functions were implemented to manage grades:
-Add Grade: This creates a new dynamic array one element larger than the current one, copies the existing grades, adds the new grade at the end, deletes the old array, and updates the student’s grade pointer.
-Remove Grade: This does the reverse—creates a new array one element smaller, skips the grade to be removed while copying, deletes the old array, and updates the student's grade pointer.
+Add Grade: This creates a new dynamic array one element larger than the current one, copies the existing grades, adds the new grade at the end, deletes the old array, and updates the studentâ€™s grade pointer.
+Remove Grade: This does the reverseâ€”creates a new array one element smaller, skips the grade to be removed while copying, deletes the old array, and updates the student's grade pointer.
 These functions ensure that memory is properly managed each time grades are added or removed.
 6. Menu-Based User Interface
 The program features a loop-driven text menu that allows users to interact with the system. Options include:
